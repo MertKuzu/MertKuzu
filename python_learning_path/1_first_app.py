@@ -1,0 +1,1 @@
+print("SES VER ADANA ZİRVEDEN SELAM")
