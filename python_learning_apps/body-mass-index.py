@@ -9,7 +9,7 @@ formul=round(formul, 3)     #küsüratlı sayı çok uzamasın
 if (formul<=18.4):
     print(f"{name}, vücut kitle endeksin {formul} zayıfsın.")
 elif (formul>=18.5 and formul<=24.9):
-    print(f"{name}, vücut kilte endeksin {formul} normalsin.")
+    print(f"{name}, vücut kitle endeksin {formul} normalsin.")
 elif (formul>=25.0 and formul<=29.9):
     print(f"{name}, vücut kitle endeksin {formul} fazla kilolusun.")
 elif (formul>29.9):
