@@ -6,7 +6,7 @@ from requests.models import Response
 class Archive:
     def __init__(self):
         self.api_url= "https://api.themoviedb.org"
-        self.token = "b598bce0d4d29f8e63a42d827517f99c"
+        self.token = "..."
 
 
     def onTrend(self, page):
