@@ -4,7 +4,7 @@ weight=float(input("Kilonuz:"))
 height=float(input("Boyunuz: "))
 
 formul= weight/(height**2)            #bmi formula
-formul=round(formul, 3)     #küsüratlı sayı çok uzamasın 
+formul=round(formul, 3)     #for decimal number show limited
 
 if (formul<=18.4):
     print(f"{name}, vücut kitle endeksin {formul} zayıfsın.")
