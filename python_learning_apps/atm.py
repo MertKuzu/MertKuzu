@@ -1,4 +1,4 @@
-#veri tabanındaki(temsili) hesap listesi
+#account list (actualy dict)
 accounts={
     'mertkuzu':{
         'accountPassword':'abc123',
@@ -20,8 +20,8 @@ accounts={
     }
 }
 
-#Fonksiyonlar: username global çünkü giriş yaparken kullanılan username her yerde kullanılıyor
-#giriş yapma fonksiyonu:
+#Functions: I used username global because when we're inputting while login username i use that username variable everywhere
+#login func:
 def loginAccount():
     loginAttempt=3
     while not loginAttempt==0:
@@ -45,14 +45,14 @@ def loginAccount():
             print('Çok sayıda deneme yaptınız lütfen daha sonra tekrar deneyin.')
         
 
-#bakiye sorgulama fonksiyonu:
+#showing money fucn:
 def showMoney():
     global username
     print(f"Paranız: {accounts[username]['money']} TL")
     print(f"Kredi Limitiniz: {accounts[username]['creditLimit']} TL")
 
 
-#para çekme fonksiyonu:
+#withdraw func:
 def withdraw():
     global username
     withdrawMoney=int(input('Çekmek istediğiniz tutarı girin: '))
@@ -79,7 +79,7 @@ def withdraw():
         else:
             print('İşleminiz iptal edildi.')
             
-#para yatırma fonksiyonu:            
+#deposit func:            
 def deposit():
     global username
     depositMoney=int(input('Yatırmak istediğiniz tutarı girin: '))
@@ -87,7 +87,7 @@ def deposit():
     accounts[username]['money']=totalMoney
     print('Yatırma işlemi başarılı.')
 
-#devam fonksyionu
+#countinue func
 
 def next():
     while True:
