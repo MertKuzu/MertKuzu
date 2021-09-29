@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
+#I learned web scraping. I'm getting the data with web scraping here.
+
 url = "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
 
 html = requests.get(url).content
