@@ -5,22 +5,22 @@ class Github:
 
     def __init__(self):
         self.api_url = 'https://api.github.com'
-        self.token = '...'        #kendi tokenını koy 
+        self.token = '...'        #put here your personel private token
 
     def getUser(self, username):
         response = requests.get(self.api_url+'/users/'+username)
-        return response.json()          #api üzerinden kullanıcı bilgisi
+        return response.json()          #user info from api
 
     def getRepositories(self, username):
         response = requests.get(self.api_url+'/users/'+username+'/repos')
-        return response.json()          #api üzerinden respository bilgisi
+        return response.json()          #repository info from api
 
     def createRepositories(self, name):
         response = requests.post(self.api_url+'/user/repos', headers={
             "Authorization":f"token {self.token}"
         }, json = {
             "name": name,
-            "description": "This is your first repository.",       #api üzerinden respository yaratma
+            "description": "This is your first repository.",       #creating repository with api
             "homepage": "https://github.com",
             "private": False,
         })
