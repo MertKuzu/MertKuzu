@@ -1,12 +1,12 @@
 import random
 
 odd=False
-even=False       #fonksiyonlarda kullandığım global değerler
-money=0             #masaya oturulan para
-betMoney=0         #bahis yapıalcak para
-choiceBet=0         #tek mi çift mi nin boş hali
+even=False       #This is global variables i use in func
+money=0             #this is starting money
+betMoney=0         #this is betmoney
+choiceBet=0         #odd or even   empty one
 
-#zar atma ve tek çift hesaplama fonksiyonu
+#rolling dice and calculate odd or even func
 def dice():
     global odd
     global even
@@ -15,7 +15,7 @@ def dice():
     dices=d1+d2
     if dices%2==0:
         even=True 
-        odd=False    #bet kazandı mı kaybetti mi de kullanılacak
+        odd=False    #this will use calculating the bet is win or lose
         print(f"Çift! Zarların toplamı: {dices}")
         
     else:
@@ -23,12 +23,12 @@ def dice():
         even=False
         print(f"Tek! Zarların toplamı: {dices}")
         
-#para yatırma fonksiyonu
+#deposit money func
 def deposit():
     global money
     while True:
         money=int(input('Oyuna girmek istediğiniz miktar para yatırın. (100$ - 50000$)'))
-        if 100<=money<=50000:    #para limiti
+        if 100<=money<=50000:    #money limit
             print('Keyifli oyunlar.')
             break
         else:
@@ -36,7 +36,7 @@ def deposit():
 
     
 
-#bahis yapma fonksiyonu
+#bet func
 def bet():
     global money
     global betMoney
@@ -50,7 +50,7 @@ def bet():
             break
 
      
- #tek mi çift mi seçme fonksiyonu   
+ #odd or even choosing func
 def choiceMove():
     global choiceBet
     while True:
@@ -62,7 +62,7 @@ def choiceMove():
         else:
             print('Hatalı oynadınız. Tekrar seçin.')
 
-#bahsi kontrol etme fonksiyonu
+#this is checking the bet. Is the bet win or lose?
 
 def check():
     global odd
@@ -81,7 +81,7 @@ def check():
         money-=betMoney
         print(f"Hay aksi! Bakiyeniz: {money}$")
 
-#play all in or go home fonksiyonu xd
+#play all in or go home func xd
 
 def goNext():
     global money
