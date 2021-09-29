@@ -1,6 +1,6 @@
 
 def calculateGrade(info):
-    info = info[:-1]     #boş satırları siliyor
+    info = info[:-1]     #it deletes empty line
     liste = info.split(':')  
     studentName = liste[0]
     studentGrades = liste[1].split(',')
@@ -27,7 +27,7 @@ def calculateGrade(info):
     else:
         letter='FF'
 
-    return studentName + ': ' + letter + '\n'   #bilgileri geriye gönderiyor
+    return studentName + ': ' + letter + '\n'   #it is returning to back with the information
 
 
 def readGrade():
