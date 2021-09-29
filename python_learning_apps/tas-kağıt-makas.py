@@ -1,7 +1,6 @@
 import random
 
-#oyun esnasındayken çıkma tuşu ekle q olsun ama sürekli söylemesin 1 kere söylesin
-#scoreboard olacak
+
 
 
 
