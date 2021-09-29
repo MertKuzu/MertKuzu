@@ -3,8 +3,8 @@ import random
 randomnum=random.randint(1,100)          
 
 live=int(input("Kaç hak istiyorsunuz: "))           
-tryTime=live   #tryTime ı kaç canımız kaldığını hesaplarken live i puan hesaplarken kullandım
-playtime=0   #puan hesaplaması için
+tryTime=live   #I used to trytime variable when calculating how much do i have live and i used to live variable when i'm calculating score
+playtime=0   #this is calculating score for
 
 while tryTime>0:
     tryTime-=1
