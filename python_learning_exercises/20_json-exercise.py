@@ -1,6 +1,9 @@
 import json
 import os
 
+#I learned json here. I used .json file.
+
+
 class User:
     def __init__(self, username, password, email):
         self.username=username
@@ -16,7 +19,7 @@ class UserRepository:
         #load users from .json file
         self.loadUsers()
 
-    def loadUsers(self):
+    def loadUsers(self):                                   
         if os.path.exists('20.5_users.json'):
             with open("20.5_users.json","r", encoding="utf-8") as file:
                 users = json.load(file)
