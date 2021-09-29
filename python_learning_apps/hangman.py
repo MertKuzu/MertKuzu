@@ -59,13 +59,13 @@ words = ('istanbul','ankara','izmir','adana','kütahya','kastamonu','kocaeli','t
 
 class Hangman:
   def __init__(self,words):
-    self.random_words=random.choice(words)      #rastgele kelime seçiyor
+    self.random_words=random.choice(words)      #selecting randomly a word
     self.wrong_letter=''
     self.correct_letter=''
     self.game_is_done=False
     
   def hangman_display(self):
-    print(hangmanpics[len(self.wrong_letter)])    #yukardaki görseli yanlış yaptıkça bir sonrakine geçiriyor
+    print(hangmanpics[len(self.wrong_letter)])    #If I will do a mistake when I'm trying to guess a letter. This is changing next hangman picture for.
 
     print('Yanlış Tahminler:', end=' ')
 
@@ -73,18 +73,18 @@ class Hangman:
       print(letter, end=' ')
     print('\n')
 
-    blanks='_'*len(self.random_words)       #harfleri gizliyor 
+    blanks='_'*len(self.random_words)       #censored letter
 
     for i in range(len(self.random_words)):
-      if self.random_words[i] in self.correct_letter:                     #doğru tahmin edilen harfi yerine yerleştiriyor
+      if self.random_words[i] in self.correct_letter:                     #Changing blakns with true guessing letter
         blanks = blanks[:i] + self.random_words[i] + blanks[i+1:]
 
-    for letter in blanks:                #her gizli kelimenin arasına 1 er boşluk koyuyor ki kör olmayalım :d
+    for letter in blanks:                #  Put 1 space every blanks(_) character
       print(letter, end=' ')
 
   def word(self, word):
     if word == self.random_words:
-      print('Tebrikler bildiniz!!!')               #kontrol kısmı 
+      print('Tebrikler bildiniz!!!')               #check part
       self.check_win()
 
       if self.check_win() == True:
@@ -99,7 +99,7 @@ class Hangman:
       guess = input('Bir harf giriniz: ').lower().strip()
 
       if len(guess) > 1:
-        self.word(guess)                         #kullanıcıdan harf alma yeri 1 den fazla almamayı engelleme
+        self.word(guess)                         #Inputing a letter from user and if user inputed multiple letters this will raise error 
       elif guess in guessed:
         print('Bu harfi zaten denediniz. Lütfen başka harf girin.')
       else:
