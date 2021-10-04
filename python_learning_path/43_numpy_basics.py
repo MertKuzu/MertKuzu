@@ -22,6 +22,3 @@ print(np_multi.ndim)
 
 print(np_array.shape)
 print(np_multi.shape)
-
-x ="hello"
-print(x.upper())
