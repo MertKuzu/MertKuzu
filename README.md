@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @MertKuzu
-- 🌱 I’m currently learning Python, SQL, C, C++
+- 🌱 I’m currently learning Python, SQL, MySQL, C, C++
 
 <!---
 MertKuzu/MertKuzu is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
